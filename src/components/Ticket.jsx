@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Ticket(props){
+  let ticketStyle = {
+    backgroundColor: 'green',
+    color: 'white',
+  }
   return (
-    <div>
+    <div style={ticketStyle}>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
