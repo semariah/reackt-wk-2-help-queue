@@ -1,6 +1,8 @@
 import React from 'react'
 import TicketList from './TicketList'
 import Header from './Header'
+import { Switch, Route } from 'react-router-dom'
+import NewTicketForm from './NewTicketForm'
 
 function App(){
   let appStyle = {
@@ -10,7 +12,10 @@ function App(){
   return (
     <div style={appStyle}>
       <Header/>
-      <TicketList />
+      <Switch>
+        <Route exact path='/' component={TicketList}/>
+        <Route path='/newticket' component={NewTicketForm} />
+      </Switch>
     </div>
   );
 }
