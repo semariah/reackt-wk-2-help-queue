@@ -7,7 +7,7 @@ import NewTicketForm from './NewTicketForm'
 function App(){
   let appStyle = {
     backgroundColor: 'salmon',
-      border: '5px solid green'
+    border: '5px solid green'
   }
   return (
     <div style={appStyle}>
@@ -17,7 +17,7 @@ function App(){
         <Route path='/newticket' component={NewTicketForm} />
       </Switch>
     </div>
-  );
+  )
 }
 
 export default App
