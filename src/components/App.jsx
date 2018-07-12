@@ -13,15 +13,8 @@ class App extends React.Component {
     this.state = {
       masterTicketList: []
     }
-    this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this)
   }
-
-  handleAddingNewTicketToList(newTicket){
-    var newMasterTicketList = this.state.masterTicketList.slice()
-    newTicket.formattedWaitTime = (newTicket.timeOpen).fromNow(true)
-    newMasterTicketList.push(newTicket)
-    this.setState({masterTicketList: newMasterTicketList})
-  }
+  
 
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
